@@ -765,46 +765,6 @@ namespace SP_Project_v1_0
 
                 } // END OF ** big_switch **
             } // END OF ** big_while **
-
-            // HOW TO DELETE or UPDATE content
-
-            //cmd.CommandText = "DELETE FROM entry WHERE (name,date)=('Rice','2020/2/3')";
-            //cmd.ExecuteNonQuery();
-            //cmd.CommandText = "UPDATE entry SET price=68 WHERE (name,date)=('Burger King','2020/1/1')";
-            //cmd.ExecuteNonQuery();
-
-            // HOW TO IUPUT DATA
-
-            //string car = Console.ReadLine();
-            //uint price = Convert.ToUInt32(Console.ReadLine());
-            //cmd.CommandText = "INSERT INTO cars(name, price) VALUES(@name,@price)";
-            //cmd.Parameters.AddWithValue("@name", car);
-            //cmd.Parameters.AddWithValue("@price", price);
-            //cmd.Prepare();
-            //cmd.ExecuteNonQuery();            
-
-            // READING DATA
-
-            //string stm = "SELECT * FROM Entry ORDER BY price LIMIT 100";
-            //using var cmd_retrieve = new SQLiteCommand(stm, con);
-            //using SQLiteDataReader rdr = cmd_retrieve.ExecuteReader();
-
-            // -3, -12, 8 numbers are for indentation
-            //Console.Write($"{rdr.GetName(1), -30} {rdr.GetName(6), 6}");
-            //Console.WriteLine("     Date");
-            //while (rdr.Read())
-            //{
-            //   Console.Write($@"{rdr.GetString(1), -30} {rdr.GetInt32(6), 6}");
-            //   Console.WriteLine("  {0}/{1}/{2}",rdr.GetString(2),rdr.GetString(3),rdr.GetString(4));
-            //}
-
-            // SQLite Syntax Examples
-
-            // SELECT Account.SubCategory,Entry.description,Entry.price FROM Entry JOIN Account ON Account.id = Entry.account_id
-            // SELECT Account.SubCategory,Entry.description,Entry.price,Entry.ymd FROM Entry JOIN Account ON Account.id = Entry.account_id ORDER BY Entry.ymd
-            // SELECT Category.MainCategory,Account.SubCategory,Entry.description,Entry.price,Entry.ymd FROM Category,Entry JOIN Account ON Account.id = Entry.account_id AND Category.id=Account.category_id ORDER BY Entry.ymd
-
-
         } // END OF ** static void Main(string[] args) **
     }
 }       
