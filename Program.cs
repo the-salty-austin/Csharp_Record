@@ -752,10 +752,11 @@ namespace SP_Project_v1_0
                             }
                             Console.WriteLine("在 {0} ~ {1} 期間的消費總金額: $ {2}",search_ymd_begin,search_ymd_end,expenditure);
                             if (expenditure>budget) {Console.WriteLine("消費已超過額度");}
-                            else if (expenditure>budget*0.9) {Console.WriteLine("注意! 消費已超過額度之90%");}
-                            else if (expenditure>budget*0.75) {Console.WriteLine("消費已超過額度之75%");}
-                            else if (expenditure>budget*0.5) {Console.WriteLine("消費已超過額度之50%");}
-                            else if (expenditure>budget*0.25) {Console.WriteLine("消費已超過額度之25%");}
+                            else {
+                                float percentage=((float)expenditure/budget)*100;
+                                if (percentage<90) {Console.WriteLine("您已消費總額度之 {0}%", percentage);}
+                                else {Console.WriteLine("注意! 您已消費超過額度的90%");}
+                            }
                                      
                             break;
                             }
